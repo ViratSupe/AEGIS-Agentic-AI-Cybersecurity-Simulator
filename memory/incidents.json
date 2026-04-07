@@ -1,0 +1,2030 @@
+[
+    {
+        "timestamp": "2026-04-06 20:34:33.416661",
+        "action_taken": "monitor",
+        "target_ip": "91.233.201.122",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "56b674cc-9d3e-44d7-8c81-59428b030e07",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T20:32:51Z",
+            "source_ip": "91.233.201.122",
+            "target_ip": "198.12.145.49",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                25,
+                110,
+                143,
+                443,
+                3306,
+                3389,
+                5432
+            ],
+            "open_ports": [
+                5432,
+                110
+            ],
+            "scan_duration_ms": 3117
+        },
+        "assessment": {
+            "threat_level": "MEDIUM",
+            "reason": "Systematic port scan detected. Likely reconnaissance activity to map open services before a follow-up attack. Open ports discovered: [5432, 110]. Attacker now has a target surface map.",
+            "recommended_action": "monitor",
+            "assessed_by": "BT-SENTINEL",
+            "assessed_at": "2026-04-06T15:04:33Z",
+            "source_log_id": "56b674cc-9d3e-44d7-8c81-59428b030e07",
+            "source_ip": "91.233.201.122"
+        },
+        "plan": {
+            "decision": "monitor",
+            "explanation": "Threat level is MEDIUM. Activity is suspicious but not immediately critical. The source IP will be added to the watchlist for continued observation. | Blue Team note: Systematic port scan detected. Likely reconnaissance activity to map open services before a follow-up attack. Open ports discovered: [5432, 110]. Attacker now has a target surface map. Blue Team recommended: 'monitor'.",
+            "threat_level": "MEDIUM",
+            "target_ip": "91.233.201.122",
+            "source_log_id": "56b674cc-9d3e-44d7-8c81-59428b030e07",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:04:33Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 20:34:33.416661",
+            "action_taken": "monitor",
+            "target_ip": "91.233.201.122",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 20:34:33.832592",
+        "action_taken": "monitor",
+        "target_ip": "217.44.93.241",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "d4877f81-9c77-41b1-87d6-8eae8498b9e9",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T09:53:25Z",
+            "source_ip": "217.44.93.241",
+            "target_ip": "198.219.35.34",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                25,
+                80,
+                110,
+                3389,
+                5432,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                25
+            ],
+            "scan_duration_ms": 657
+        },
+        "assessment": {
+            "threat_level": "MEDIUM",
+            "reason": "Systematic port scan detected. Likely reconnaissance activity to map open services before a follow-up attack. Open ports discovered: [25]. Attacker now has a target surface map.",
+            "recommended_action": "monitor",
+            "assessed_by": "BT-SENTINEL",
+            "assessed_at": "2026-04-06T15:04:33Z",
+            "source_log_id": "d4877f81-9c77-41b1-87d6-8eae8498b9e9",
+            "source_ip": "217.44.93.241"
+        },
+        "plan": {
+            "decision": "monitor",
+            "explanation": "Threat level is MEDIUM. Activity is suspicious but not immediately critical. The source IP will be added to the watchlist for continued observation. | Blue Team note: Systematic port scan detected. Likely reconnaissance activity to map open services before a follow-up attack. Open ports discovered: [25]. Attacker now has a target surface map. Blue Team recommended: 'monitor'.",
+            "threat_level": "MEDIUM",
+            "target_ip": "217.44.93.241",
+            "source_log_id": "d4877f81-9c77-41b1-87d6-8eae8498b9e9",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:04:33Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 20:34:33.832592",
+            "action_taken": "monitor",
+            "target_ip": "217.44.93.241",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 20:34:34.244324",
+        "action_taken": "block_ip",
+        "target_ip": "203.116.34.233",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "771de30a-42bf-4ef1-9ac6-eb2ac428fb2b",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T07:34:43Z",
+            "source_ip": "203.116.34.233",
+            "target_ip": "5.17.236.35",
+            "attack_type": "brute_force",
+            "payload": "user:letmein",
+            "status": "failed",
+            "attempts": 49
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "Repeated login attempts detected. Credential stuffing or dictionary attack in progress \u2014 account takeover risk.",
+            "recommended_action": "block_ip",
+            "assessed_by": "BT-SENTINEL",
+            "assessed_at": "2026-04-06T15:04:34Z",
+            "source_log_id": "771de30a-42bf-4ef1-9ac6-eb2ac428fb2b",
+            "source_ip": "203.116.34.233"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: Repeated login attempts detected. Credential stuffing or dictionary attack in progress \u2014 account takeover risk. Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "203.116.34.233",
+            "source_log_id": "771de30a-42bf-4ef1-9ac6-eb2ac428fb2b",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:04:34Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 20:34:34.244324",
+            "action_taken": "block_ip",
+            "target_ip": "203.116.34.233",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 20:34:34.659225",
+        "action_taken": "block_ip",
+        "target_ip": "198.4.207.16",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "6dd0d36a-b72e-447a-b3ba-0c81b9a17483",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T06:30:54Z",
+            "source_ip": "198.4.207.16",
+            "target_ip": "5.33.238.188",
+            "attack_type": "brute_force",
+            "payload": "root:toor",
+            "status": "failed",
+            "attempts": 500
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "Repeated login attempts detected. Credential stuffing or dictionary attack in progress \u2014 account takeover risk. (500 attempts recorded \u2014 high-volume attack, immediate block strongly advised.)",
+            "recommended_action": "block_ip",
+            "assessed_by": "BT-SENTINEL",
+            "assessed_at": "2026-04-06T15:04:34Z",
+            "source_log_id": "6dd0d36a-b72e-447a-b3ba-0c81b9a17483",
+            "source_ip": "198.4.207.16"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: Repeated login attempts detected. Credential stuffing or dictionary attack in progress \u2014 account takeover risk. (500 attempts recorded \u2014 high-volume attack, immediate block strongly advised.) Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "198.4.207.16",
+            "source_log_id": "6dd0d36a-b72e-447a-b3ba-0c81b9a17483",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:04:34Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 20:34:34.659225",
+            "action_taken": "block_ip",
+            "target_ip": "198.4.207.16",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 20:34:35.105120",
+        "action_taken": "block_ip",
+        "target_ip": "45.220.92.128",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "4e091e0c-9cee-43ea-a79e-12c2afa826f9",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T11:35:41Z",
+            "source_ip": "45.220.92.128",
+            "target_ip": "91.59.160.223",
+            "attack_type": "sql_injection",
+            "endpoint": "/api/users",
+            "payload": "' OR '1'='1",
+            "http_method": "POST",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "SQL injection payload identified in request. Attacker may be attempting unauthorised data access or database manipulation.",
+            "recommended_action": "block_ip",
+            "assessed_by": "BT-SENTINEL",
+            "assessed_at": "2026-04-06T15:04:35Z",
+            "source_log_id": "4e091e0c-9cee-43ea-a79e-12c2afa826f9",
+            "source_ip": "45.220.92.128"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: SQL injection payload identified in request. Attacker may be attempting unauthorised data access or database manipulation. Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "45.220.92.128",
+            "source_log_id": "4e091e0c-9cee-43ea-a79e-12c2afa826f9",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:04:35Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 20:34:35.105120",
+            "action_taken": "block_ip",
+            "target_ip": "45.220.92.128",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:25:48.656797",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "ba18fecd-c914-41be-8784-12b6da783fa0",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T22:04:47Z",
+            "source_ip": "5.182.211.128",
+            "target_ip": "198.185.23.148",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                22,
+                25,
+                443,
+                3306,
+                8080
+            ],
+            "open_ports": [
+                443,
+                22
+            ],
+            "scan_duration_ms": 982
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "ba18fecd-c914-41be-8784-12b6da783fa0"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "ba18fecd-c914-41be-8784-12b6da783fa0",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:55:48Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:25:48.656797",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:25:52.283319",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "669ee07a-d8d8-4826-8fb6-327348a82b29",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T09:29:49Z",
+            "source_ip": "198.58.169.189",
+            "target_ip": "185.236.169.90",
+            "attack_type": "sql_injection",
+            "endpoint": "/products",
+            "payload": "1' AND SLEEP(5) --",
+            "http_method": "POST",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "669ee07a-d8d8-4826-8fb6-327348a82b29"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "669ee07a-d8d8-4826-8fb6-327348a82b29",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:55:52Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:25:52.283319",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:25:55.661094",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "07eff232-53b6-4698-a30d-3c8df330fb6a",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T15:26:14Z",
+            "source_ip": "198.113.91.84",
+            "target_ip": "45.244.253.222",
+            "attack_type": "sql_injection",
+            "endpoint": "/search",
+            "payload": "' UNION SELECT username, password FROM users --",
+            "http_method": "GET",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "07eff232-53b6-4698-a30d-3c8df330fb6a"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "07eff232-53b6-4698-a30d-3c8df330fb6a",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:55:55Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:25:55.661094",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:25:59.365126",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "98e2ac62-ded4-4e81-b830-17665abe9e2d",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T17:18:21Z",
+            "source_ip": "198.114.205.154",
+            "target_ip": "203.8.240.90",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                22,
+                53,
+                110,
+                443,
+                5432
+            ],
+            "open_ports": [
+                443
+            ],
+            "scan_duration_ms": 4190
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "98e2ac62-ded4-4e81-b830-17665abe9e2d"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "98e2ac62-ded4-4e81-b830-17665abe9e2d",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:55:59Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:25:59.365126",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:26:02.899333",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "026fb1a9-afe3-4686-9f12-da2d151a5dd0",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T08:52:02Z",
+            "source_ip": "91.107.115.203",
+            "target_ip": "103.48.96.164",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                22,
+                23,
+                80,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                22
+            ],
+            "scan_duration_ms": 3345
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "026fb1a9-afe3-4686-9f12-da2d151a5dd0"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "026fb1a9-afe3-4686-9f12-da2d151a5dd0",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:56:02Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:26:02.899333",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:29:01.384791",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "d09e0290-8a12-4576-92c7-76525861978b",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T09:58:04Z",
+            "source_ip": "203.180.223.8",
+            "target_ip": "45.137.29.225",
+            "attack_type": "sql_injection",
+            "endpoint": "/login",
+            "payload": "' UNION SELECT username, password FROM users --",
+            "http_method": "POST",
+            "response_code": 403
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "d09e0290-8a12-4576-92c7-76525861978b"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "d09e0290-8a12-4576-92c7-76525861978b",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:59:01Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:29:01.384791",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:29:04.851187",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "56dc9e48-2e4c-4218-80c2-ecd98c443146",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T15:32:34Z",
+            "source_ip": "91.181.19.252",
+            "target_ip": "5.130.109.250",
+            "attack_type": "sql_injection",
+            "endpoint": "/login",
+            "payload": "'; DROP TABLE users; --",
+            "http_method": "GET",
+            "response_code": 403
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "56dc9e48-2e4c-4218-80c2-ecd98c443146"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "56dc9e48-2e4c-4218-80c2-ecd98c443146",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:59:04Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:29:04.851187",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:29:08.339272",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "41583407-9071-4b65-9de6-cf7d23f2f0a4",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T23:20:29Z",
+            "source_ip": "198.224.0.4",
+            "target_ip": "45.213.52.197",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                23,
+                80,
+                443,
+                3389,
+                5432,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                443,
+                23,
+                80
+            ],
+            "scan_duration_ms": 2922
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "41583407-9071-4b65-9de6-cf7d23f2f0a4"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "41583407-9071-4b65-9de6-cf7d23f2f0a4",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:59:08Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:29:08.339272",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:29:11.779550",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "aa2e1218-1acc-40e6-9f6c-420c2b02ee85",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T08:47:47Z",
+            "source_ip": "198.181.38.244",
+            "target_ip": "45.34.77.17",
+            "attack_type": "sql_injection",
+            "endpoint": "/api/users",
+            "payload": "1' AND SLEEP(5) --",
+            "http_method": "GET",
+            "response_code": 400
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "aa2e1218-1acc-40e6-9f6c-420c2b02ee85"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "aa2e1218-1acc-40e6-9f6c-420c2b02ee85",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:59:11Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:29:11.779550",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:29:15.373265",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "b60d2cd6-d95d-469b-a7a4-5e687508f32e",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T03:50:00Z",
+            "source_ip": "185.144.163.151",
+            "target_ip": "5.104.92.66",
+            "attack_type": "brute_force",
+            "payload": "root:toor",
+            "status": "failed",
+            "attempts": 295
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "b60d2cd6-d95d-469b-a7a4-5e687508f32e"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "b60d2cd6-d95d-469b-a7a4-5e687508f32e",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T15:59:15Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:29:15.373265",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:32:01.265780",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "f1479e89-3d12-4b1d-8a89-ab1d6adef6fb",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T04:43:25Z",
+            "source_ip": "91.91.60.121",
+            "target_ip": "203.62.123.20",
+            "attack_type": "brute_force",
+            "payload": "admin:admin",
+            "status": "failed",
+            "attempts": 400
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "f1479e89-3d12-4b1d-8a89-ab1d6adef6fb"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "f1479e89-3d12-4b1d-8a89-ab1d6adef6fb",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:02:01Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:32:01.265780",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:32:04.880540",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "31e1e664-bca2-488a-a8c3-66b4ecfd03d0",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T10:06:12Z",
+            "source_ip": "203.234.66.84",
+            "target_ip": "185.225.235.32",
+            "attack_type": "brute_force",
+            "payload": "guest:guest123",
+            "status": "failed",
+            "attempts": 360
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "31e1e664-bca2-488a-a8c3-66b4ecfd03d0"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "31e1e664-bca2-488a-a8c3-66b4ecfd03d0",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:02:04Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:32:04.880540",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:32:08.357760",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "a577f861-5a58-422d-a1f5-defc2320acb0",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T01:07:41Z",
+            "source_ip": "198.207.252.174",
+            "target_ip": "185.240.199.22",
+            "attack_type": "sql_injection",
+            "endpoint": "/admin/query",
+            "payload": "' UNION SELECT username, password FROM users --",
+            "http_method": "GET",
+            "response_code": 500
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "a577f861-5a58-422d-a1f5-defc2320acb0"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "a577f861-5a58-422d-a1f5-defc2320acb0",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:02:08Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:32:08.357760",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:32:12.045997",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "b78c012b-3db5-477e-8bf2-b32c70ffa24a",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T22:41:40Z",
+            "source_ip": "45.248.206.234",
+            "target_ip": "45.195.166.72",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                53,
+                80,
+                110,
+                143,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                8080,
+                53,
+                80
+            ],
+            "scan_duration_ms": 954
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "b78c012b-3db5-477e-8bf2-b32c70ffa24a"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "b78c012b-3db5-477e-8bf2-b32c70ffa24a",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:02:12Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:32:12.045997",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:32:15.783184",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "a97035b1-2db6-4685-a06d-0c97bb289f1c",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:27:42Z",
+            "source_ip": "103.201.137.115",
+            "target_ip": "45.1.55.166",
+            "attack_type": "brute_force",
+            "payload": "operator:pass@2024",
+            "status": "failed",
+            "attempts": 311
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "a97035b1-2db6-4685-a06d-0c97bb289f1c"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "a97035b1-2db6-4685-a06d-0c97bb289f1c",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:02:15Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:32:15.783184",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:34:44.332239",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "4b68d2e9-6cb2-4ac0-b863-9c47332f76e1",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T04:46:29Z",
+            "source_ip": "185.62.173.198",
+            "target_ip": "5.33.86.147",
+            "attack_type": "sql_injection",
+            "endpoint": "/admin/query",
+            "payload": "'; DROP TABLE users; --",
+            "http_method": "POST",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "4b68d2e9-6cb2-4ac0-b863-9c47332f76e1"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "4b68d2e9-6cb2-4ac0-b863-9c47332f76e1",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:04:44Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:34:44.332239",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:34:44.917164",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "69020ccf-7da7-4f60-9b2c-ec36b25a00e7",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T04:16:51Z",
+            "source_ip": "198.155.222.207",
+            "target_ip": "203.188.86.197",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                25,
+                80,
+                110,
+                143,
+                443
+            ],
+            "open_ports": [
+                25,
+                80,
+                443
+            ],
+            "scan_duration_ms": 2989
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "69020ccf-7da7-4f60-9b2c-ec36b25a00e7"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "69020ccf-7da7-4f60-9b2c-ec36b25a00e7",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:04:44Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:34:44.917164",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:34:45.566289",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "25d663b6-b11f-44d3-bd9a-dd2cc81f3f5d",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T07:25:34Z",
+            "source_ip": "5.147.31.172",
+            "target_ip": "198.146.116.3",
+            "attack_type": "sql_injection",
+            "endpoint": "/login",
+            "payload": "' OR 1=1 LIMIT 1 --",
+            "http_method": "POST",
+            "response_code": 403
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "25d663b6-b11f-44d3-bd9a-dd2cc81f3f5d"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "25d663b6-b11f-44d3-bd9a-dd2cc81f3f5d",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:04:45Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:34:45.566289",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:34:46.130105",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "48b3b3cc-a85e-4885-921d-3c831ea732be",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T18:39:02Z",
+            "source_ip": "103.158.99.170",
+            "target_ip": "217.6.16.96",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                22,
+                143,
+                5432
+            ],
+            "open_ports": [
+                5432,
+                143
+            ],
+            "scan_duration_ms": 714
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "48b3b3cc-a85e-4885-921d-3c831ea732be"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "48b3b3cc-a85e-4885-921d-3c831ea732be",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:04:46Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:34:46.130105",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:34:46.790998",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "2d52b324-6483-4535-98d9-0bb142810770",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T19:22:24Z",
+            "source_ip": "5.1.224.123",
+            "target_ip": "103.101.228.2",
+            "attack_type": "brute_force",
+            "payload": "admin:password123",
+            "status": "failed",
+            "attempts": 379
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "2d52b324-6483-4535-98d9-0bb142810770"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "2d52b324-6483-4535-98d9-0bb142810770",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:04:46Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:34:46.790998",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:39:42.976238",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "47756060-012b-4e5a-996e-e865e5536a64",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:57:31Z",
+            "source_ip": "91.235.158.151",
+            "target_ip": "185.100.101.178",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                22,
+                25,
+                80,
+                110,
+                3389
+            ],
+            "open_ports": [
+                80,
+                21,
+                3389
+            ],
+            "scan_duration_ms": 4235
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "47756060-012b-4e5a-996e-e865e5536a64"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "47756060-012b-4e5a-996e-e865e5536a64",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:09:42Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:39:42.976238",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:39:43.555230",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "18b80915-92f9-40e3-a3d4-47b0ee190739",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:01:06Z",
+            "source_ip": "5.69.201.14",
+            "target_ip": "198.231.183.132",
+            "attack_type": "sql_injection",
+            "endpoint": "/search",
+            "payload": "' OR '1'='1",
+            "http_method": "POST",
+            "response_code": 400
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "18b80915-92f9-40e3-a3d4-47b0ee190739"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "18b80915-92f9-40e3-a3d4-47b0ee190739",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:09:43Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:39:43.555230",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:39:44.135832",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "6fd077f8-2cc0-4d4f-b705-836930a55e2d",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T00:19:48Z",
+            "source_ip": "103.81.122.253",
+            "target_ip": "45.109.77.48",
+            "attack_type": "brute_force",
+            "payload": "admin:password123",
+            "status": "success",
+            "attempts": 291
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "6fd077f8-2cc0-4d4f-b705-836930a55e2d"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "6fd077f8-2cc0-4d4f-b705-836930a55e2d",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:09:44Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:39:44.135832",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:39:44.789672",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "70e77ace-d32d-420f-8a63-1657141194b7",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T21:47:44Z",
+            "source_ip": "198.194.179.13",
+            "target_ip": "45.231.29.207",
+            "attack_type": "brute_force",
+            "payload": "guest:guest123",
+            "status": "failed",
+            "attempts": 443
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "70e77ace-d32d-420f-8a63-1657141194b7"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "70e77ace-d32d-420f-8a63-1657141194b7",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:09:44Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:39:44.789672",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:39:45.365120",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "935764bc-e0b6-4f87-858b-c6b48fd9ddb1",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T13:13:08Z",
+            "source_ip": "45.184.67.115",
+            "target_ip": "203.117.75.125",
+            "attack_type": "brute_force",
+            "payload": "user:letmein",
+            "status": "failed",
+            "attempts": 123
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "935764bc-e0b6-4f87-858b-c6b48fd9ddb1"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "935764bc-e0b6-4f87-858b-c6b48fd9ddb1",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:09:45Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:39:45.365120",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:46:41.021929",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "32249be4-88e7-406b-ba55-1923249ee4bd",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T01:42:22Z",
+            "source_ip": "198.98.31.56",
+            "target_ip": "185.171.147.144",
+            "attack_type": "sql_injection",
+            "endpoint": "/login",
+            "payload": "'; DROP TABLE users; --",
+            "http_method": "POST",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "32249be4-88e7-406b-ba55-1923249ee4bd"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "32249be4-88e7-406b-ba55-1923249ee4bd",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:16:41Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:46:41.021929",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:46:41.628867",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "d85c0e53-2cca-4f1e-a197-4d961f05d7f7",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:21:45Z",
+            "source_ip": "198.138.220.249",
+            "target_ip": "217.216.8.229",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                53,
+                80,
+                110,
+                443,
+                3389,
+                5432,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                8080,
+                443
+            ],
+            "scan_duration_ms": 3579
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "d85c0e53-2cca-4f1e-a197-4d961f05d7f7"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "d85c0e53-2cca-4f1e-a197-4d961f05d7f7",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:16:41Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:46:41.628867",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:46:42.208671",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "ce812e53-dda8-431b-bc68-5395d40125b8",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T00:20:10Z",
+            "source_ip": "217.205.221.53",
+            "target_ip": "198.147.181.16",
+            "attack_type": "brute_force",
+            "payload": "admin:password123",
+            "status": "success",
+            "attempts": 462
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "ce812e53-dda8-431b-bc68-5395d40125b8"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "ce812e53-dda8-431b-bc68-5395d40125b8",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:16:42Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:46:42.208671",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:46:42.888911",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "885ccdf4-3b34-4e6f-9d88-aec1f11977e6",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T05:16:46Z",
+            "source_ip": "185.42.214.189",
+            "target_ip": "198.111.179.182",
+            "attack_type": "brute_force",
+            "payload": "guest:guest123",
+            "status": "failed",
+            "attempts": 72
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "885ccdf4-3b34-4e6f-9d88-aec1f11977e6"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "885ccdf4-3b34-4e6f-9d88-aec1f11977e6",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:16:42Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:46:42.888911",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:46:43.443659",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "94abb69c-6164-46f2-a8b8-095bbb6673f0",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T20:50:16Z",
+            "source_ip": "45.100.34.124",
+            "target_ip": "198.126.204.5",
+            "attack_type": "brute_force",
+            "payload": "admin:password123",
+            "status": "failed",
+            "attempts": 274
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "94abb69c-6164-46f2-a8b8-095bbb6673f0"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods. Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "94abb69c-6164-46f2-a8b8-095bbb6673f0",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:16:43Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:46:43.443659",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:48:40.008681",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "bbfc73d3-4371-4ec1-842a-495eaee7b918",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T02:32:27Z",
+            "source_ip": "45.179.180.103",
+            "target_ip": "185.153.146.151",
+            "attack_type": "brute_force",
+            "payload": "guest:guest123",
+            "status": "failed",
+            "attempts": 170
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: Expecting value: line 1 column 1 (char 0)",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "bbfc73d3-4371-4ec1-842a-495eaee7b918"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: Expecting value: line 1 column 1 (char 0) Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "bbfc73d3-4371-4ec1-842a-495eaee7b918",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:18:40Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:48:40.008681",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:48:46.971619",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "b1b6ce72-04cb-4c0e-a84c-8d85ebdfb18e",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T01:24:25Z",
+            "source_ip": "198.79.61.136",
+            "target_ip": "103.205.214.25",
+            "attack_type": "sql_injection",
+            "endpoint": "/api/users",
+            "payload": "'; DROP TABLE users; --",
+            "http_method": "POST",
+            "response_code": 500
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: Expecting value: line 1 column 1 (char 0)",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "b1b6ce72-04cb-4c0e-a84c-8d85ebdfb18e"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: Expecting value: line 1 column 1 (char 0) Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "b1b6ce72-04cb-4c0e-a84c-8d85ebdfb18e",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:18:46Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:48:46.971619",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:48:52.932950",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "22e1bfee-c16a-4dd1-9d6c-9df9c274ca98",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:16:44Z",
+            "source_ip": "5.253.114.203",
+            "target_ip": "217.5.2.143",
+            "attack_type": "brute_force",
+            "payload": "user:letmein",
+            "status": "failed",
+            "attempts": 124
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: Expecting value: line 1 column 1 (char 0)",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "22e1bfee-c16a-4dd1-9d6c-9df9c274ca98"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: Expecting value: line 1 column 1 (char 0) Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "22e1bfee-c16a-4dd1-9d6c-9df9c274ca98",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:18:52Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:48:52.932950",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:49:01.818162",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "f2014496-91fa-46b7-95cc-bb49941e4740",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T02:45:19Z",
+            "source_ip": "203.154.8.68",
+            "target_ip": "45.78.142.192",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                22,
+                8080
+            ],
+            "open_ports": [
+                21,
+                22
+            ],
+            "scan_duration_ms": 543
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: Expecting value: line 1 column 1 (char 0)",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "f2014496-91fa-46b7-95cc-bb49941e4740"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: Expecting value: line 1 column 1 (char 0) Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "f2014496-91fa-46b7-95cc-bb49941e4740",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:19:01Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:49:01.818162",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:49:09.089788",
+        "action_taken": "ignore",
+        "target_ip": "unknown",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "33121f0b-5cab-4525-9a83-996eb02d9dc7",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T05:51:51Z",
+            "source_ip": "91.145.188.207",
+            "target_ip": "45.196.67.139",
+            "attack_type": "brute_force",
+            "payload": "admin:admin",
+            "status": "failed",
+            "attempts": 84
+        },
+        "assessment": {
+            "threat_level": "LOW",
+            "reason": "Error in AI detection: Expecting value: line 1 column 1 (char 0)",
+            "recommended_action": "monitor",
+            "source_ip": "unknown",
+            "source_log_id": "33121f0b-5cab-4525-9a83-996eb02d9dc7"
+        },
+        "plan": {
+            "decision": "ignore",
+            "explanation": "Threat level is LOW. No significant risk detected. Log retained for audit purposes \u2014 no active response required. | Blue Team note: Error in AI detection: Expecting value: line 1 column 1 (char 0) Blue Team recommended: 'monitor'.",
+            "threat_level": "LOW",
+            "target_ip": "unknown",
+            "source_log_id": "33121f0b-5cab-4525-9a83-996eb02d9dc7",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:19:09Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:49:09.089788",
+            "action_taken": "ignore",
+            "target_ip": "unknown",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:52:07.475112",
+        "action_taken": "block_ip",
+        "target_ip": "185.91.204.95",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "b07d4a17-67bb-4acc-b89b-22151fbfccb7",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-05T22:21:06Z",
+            "source_ip": "185.91.204.95",
+            "target_ip": "217.35.160.174",
+            "attack_type": "sql_injection",
+            "endpoint": "/login",
+            "payload": "'; DROP TABLE users; --",
+            "http_method": "GET",
+            "response_code": 500
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "The log shows a detected SQL injection attempt with a highly destructive payload containing 'DROP TABLE users'. The 500 Internal Server Error response code suggests the application may have processed the malicious input, potentially leading to a backend error or successful execution. This is a critical attempt to compromise data integrity and availability.",
+            "recommended_action": "block_ip",
+            "source_ip": "185.91.204.95",
+            "source_log_id": "b07d4a17-67bb-4acc-b89b-22151fbfccb7"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: The log shows a detected SQL injection attempt with a highly destructive payload containing 'DROP TABLE users'. The 500 Internal Server Error response code suggests the application may have processed the malicious input, potentially leading to a backend error or successful execution. This is a critical attempt to compromise data integrity and availability. Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "185.91.204.95",
+            "source_log_id": "b07d4a17-67bb-4acc-b89b-22151fbfccb7",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:22:07Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:52:07.475112",
+            "action_taken": "block_ip",
+            "target_ip": "185.91.204.95",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:52:11.475765",
+        "action_taken": "monitor",
+        "target_ip": "91.155.145.61",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "79e1abc3-93b7-4c61-920d-199486806e62",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T10:20:04Z",
+            "source_ip": "91.155.145.61",
+            "target_ip": "185.69.170.91",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                21,
+                25,
+                53,
+                110,
+                143,
+                3389,
+                8443
+            ],
+            "open_ports": [
+                143,
+                110
+            ],
+            "scan_duration_ms": 3299
+        },
+        "assessment": {
+            "threat_level": "MEDIUM",
+            "reason": "A port scan was detected, successfully identifying two open ports (IMAP and POP3) on the target system. This indicates active reconnaissance and could be a precursor to further attacks targeting these exposed services.",
+            "recommended_action": "monitor",
+            "source_ip": "91.155.145.61",
+            "source_log_id": "79e1abc3-93b7-4c61-920d-199486806e62"
+        },
+        "plan": {
+            "decision": "monitor",
+            "explanation": "Threat level is MEDIUM. Activity is suspicious but not immediately critical. The source IP will be added to the watchlist for continued observation. | Blue Team note: A port scan was detected, successfully identifying two open ports (IMAP and POP3) on the target system. This indicates active reconnaissance and could be a precursor to further attacks targeting these exposed services. Blue Team recommended: 'monitor'.",
+            "threat_level": "MEDIUM",
+            "target_ip": "91.155.145.61",
+            "source_log_id": "79e1abc3-93b7-4c61-920d-199486806e62",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:22:11Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:52:11.475765",
+            "action_taken": "monitor",
+            "target_ip": "91.155.145.61",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:52:16.832934",
+        "action_taken": "block_ip",
+        "target_ip": "185.227.95.130",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "2c5a162f-eef5-4962-9f93-385059f40b0f",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T14:45:48Z",
+            "source_ip": "185.227.95.130",
+            "target_ip": "198.44.50.130",
+            "attack_type": "sql_injection",
+            "endpoint": "/search",
+            "payload": "' UNION SELECT username, password FROM users --",
+            "http_method": "POST",
+            "response_code": 400
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "A severe SQL injection attempt was detected, targeting user credentials through the '/search' endpoint. The payload explicitly tries to exfiltrate usernames and passwords from the 'users' table. Although the response code was 400, indicating a potential failure or blocking, the intent of the attack is highly malicious and represents a significant risk to data security and could lead to unauthorized access and data exfiltration.",
+            "recommended_action": "block_ip",
+            "source_ip": "185.227.95.130",
+            "source_log_id": "2c5a162f-eef5-4962-9f93-385059f40b0f"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: A severe SQL injection attempt was detected, targeting user credentials through the '/search' endpoint. The payload explicitly tries to exfiltrate usernames and passwords from the 'users' table. Although the response code was 400, indicating a potential failure or blocking, the intent of the attack is highly malicious and represents a significant risk to data security and could lead to unauthorized access and data exfiltration. Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "185.227.95.130",
+            "source_log_id": "2c5a162f-eef5-4962-9f93-385059f40b0f",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:22:16Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:52:16.832934",
+            "action_taken": "block_ip",
+            "target_ip": "185.227.95.130",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:52:22.427965",
+        "action_taken": "monitor",
+        "target_ip": "45.92.131.115",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "a19713bc-d55c-4f96-9984-03748742461b",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T07:42:13Z",
+            "source_ip": "45.92.131.115",
+            "target_ip": "5.42.244.175",
+            "attack_type": "port_scan",
+            "payload": null,
+            "ports_scanned": [
+                22,
+                25,
+                53,
+                110,
+                3389,
+                8080,
+                8443
+            ],
+            "open_ports": [
+                25,
+                22,
+                53
+            ],
+            "scan_duration_ms": 3589
+        },
+        "assessment": {
+            "threat_level": "MEDIUM",
+            "reason": "A port scan from 45.92.131.115 targeted 5.42.244.175, discovering open ports 22 (SSH), 25 (SMTP), and 53 (DNS). This indicates active reconnaissance and potential preparatory activity for a more significant attack against services known to be open.",
+            "recommended_action": "block_ip",
+            "source_ip": "45.92.131.115",
+            "source_log_id": "a19713bc-d55c-4f96-9984-03748742461b"
+        },
+        "plan": {
+            "decision": "monitor",
+            "explanation": "Threat level is MEDIUM. Activity is suspicious but not immediately critical. The source IP will be added to the watchlist for continued observation. | Blue Team note: A port scan from 45.92.131.115 targeted 5.42.244.175, discovering open ports 22 (SSH), 25 (SMTP), and 53 (DNS). This indicates active reconnaissance and potential preparatory activity for a more significant attack against services known to be open. Blue Team recommended: 'block_ip'.",
+            "threat_level": "MEDIUM",
+            "target_ip": "45.92.131.115",
+            "source_log_id": "a19713bc-d55c-4f96-9984-03748742461b",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:22:22Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:52:22.427965",
+            "action_taken": "monitor",
+            "target_ip": "45.92.131.115",
+            "status": "success"
+        }
+    },
+    {
+        "timestamp": "2026-04-06 21:52:26.315770",
+        "action_taken": "block_ip",
+        "target_ip": "45.160.135.56",
+        "status": "success"
+    },
+    {
+        "attack": {
+            "log_id": "f3e2c779-1448-4ffb-9484-cace61075409",
+            "agent_id": "RT-ALPHA",
+            "timestamp": "2026-04-06T05:55:01Z",
+            "source_ip": "45.160.135.56",
+            "target_ip": "203.125.235.93",
+            "attack_type": "sql_injection",
+            "endpoint": "/api/users",
+            "payload": "' OR '1'='1",
+            "http_method": "GET",
+            "response_code": 200
+        },
+        "assessment": {
+            "threat_level": "HIGH",
+            "reason": "A clear SQL injection payload (' OR '1'='1) was detected targeting the '/api/users' endpoint, a sensitive area. The 200 OK response code indicates the server processed the request, raising concerns that the injection attempt may have been successful or at least not immediately mitigated by application-level defenses.",
+            "recommended_action": "block_ip",
+            "source_ip": "45.160.135.56",
+            "source_log_id": "f3e2c779-1448-4ffb-9484-cace61075409"
+        },
+        "plan": {
+            "decision": "block_ip",
+            "explanation": "Threat level is HIGH. Immediate action required \u2014 the source IP has been flagged for blocking to prevent further intrusion attempts or data compromise. | Blue Team note: A clear SQL injection payload (' OR '1'='1) was detected targeting the '/api/users' endpoint, a sensitive area. The 200 OK response code indicates the server processed the request, raising concerns that the injection attempt may have been successful or at least not immediately mitigated by application-level defenses. Blue Team recommended: 'block_ip'.",
+            "threat_level": "HIGH",
+            "target_ip": "45.160.135.56",
+            "source_log_id": "f3e2c779-1448-4ffb-9484-cace61075409",
+            "planned_by": "PLANNER-ALPHA",
+            "planned_at": "2026-04-06T16:22:26Z"
+        },
+        "action": {
+            "timestamp": "2026-04-06 21:52:26.315770",
+            "action_taken": "block_ip",
+            "target_ip": "45.160.135.56",
+            "status": "success"
+        }
+    }
+]
